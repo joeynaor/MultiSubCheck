@@ -3,8 +3,8 @@
 # MultiSubCheck
 ## MultiSubCheck can scan HTTP Headers & subdomain takeover vulnerabilites on all subdomains of a specified domain.
 
-### Requirments:
-- Subfinder
+### Requirements:
+- [Subfinder](https://github.com/subfinder/subfinder)
 - NMAP
 
 ### Usage:
