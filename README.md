@@ -4,11 +4,12 @@
 ## MultiSubCheck can scan HTTP Headers & subdomain takeover vulnerabilites on all subdomains of a specified domain.
 
 ### Requirements:
-- [Subfinder](https://github.com/subfinder/subfinder)
+- [Subfinder](https://github.com/subfinder/subfinder) (move executable to /usr/bin/)
 - NMAP
 
 ### Usage:
-```basg
+```bash
+cp subfinder /usr/bin
 chmod +x MSC.sh
 ./MSC.sh domain.com
 ```
