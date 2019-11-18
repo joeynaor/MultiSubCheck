@@ -44,7 +44,7 @@ function one {
   echo -e "\e[92m[+]\e[0m Creating scans/$1 directory ..."
 	mkdir scans/$1
 	echo -e "Sanning subdomains on $1..."
-	python sublist3r.py -d $1 -o scans/$1/subdomains.list || { echo "Could not launch sublist3r. Please follow the installation process on github."; exit 1 }
+	python sublist3r.py -d $1 -o scans/$1/subdomains.list || { echo "Could not launch sublist3r. Please follow the installation process on github."; exit 1; }
 	echo -e "\e[92m[+]\e[0m Scan done. list saved to scans/$1/subdomains.list"
 }
 
