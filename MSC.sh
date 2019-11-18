@@ -72,69 +72,17 @@ function three {
   fi
 
   echo -e "############### Checking Known CNAME on $1 subdomains"
-  echo -e "############### Checking for AWS ... "
   while IFS= read -r line
   do
-  	if [[ $line =~ "s3" ]]
+  	if [[ $line =~ "s3" ]] || [[ $line =~ "s4" ]] || [[ $line =~ "github" ]] || [[ $line =~ "herokudns" ]] || [[ $line =~ "readme" ]] || [[ $line =~ "ghost" ]] || [[ $line =~ "bitbucket" ]]|| [[ $line =~ "airee" ]] || [[ $line =~ "readme" ]] 
   	then
-  	echo -e "$line"
+  	echo -e "\e[92m[+]\e[0m Takeover might be possible at: $line"
   	fi
   done < "$input"
 
-  echo -e "############## Checking for Github ... "
-  input="scans/$1/CNAME.scan"
-  while IFS= read -r line
-  do
-          if [[ $line =~ "github" ]]
-          then
-          echo -e "$line"
-          fi
-  done < "$input"
-
-  echo -e "############## Checking for Heroku ... "
-  input="scans/$1/CNAME.scan"
-  while IFS= read -r line
-  do
-          if [[ $line =~ "herokudns" ]]
-          then
-          echo -e "$line"
-          fi
-  done < "$input"
-
-  echo -e "############## Checking for Readme.io ... "
-  input="scans/$1/CNAME.scan"
-  while IFS= read -r line
-  do
-          if [[ $line =~ "readme" ]]
-          then
-          echo -e "$line"
-          fi
-  done < "$input"
-
-  echo -e "############## Checking for Ghost ... "
-  input="scans/$1/CNAME.scan"
-  while IFS= read -r line
-  do
-          if [[ $line =~ "ghost" ]]
-          then
-          echo -e "$line"
-          fi
-  done < "$input"
-
-  echo -e "############## Checking for Bitbucket ... "
-  input="scans/$1/CNAME.scan"
-  while IFS= read -r line
-  do
-          if [[ $line =~ "bitbucket" ]]
-          then
-          echo -e "$line"
-          fi
-  done < "$input"
-
-  echo -e "########################## DONE #############################"
-  echo -e "#############################################################"
-  echo -e "### TAKEOVER INFO: https://0xpatrik.com/takeover-proofs/ ####"
-  echo -e "#############################################################"
+  echo -e "########################### DONE. TAKEOVER INFO: ############################"
+  echo -e "## https://github.com/EdOverflow/can-i-take-over-xyz/blob/master/README.md ##"
+  echo -e "#############################################################################"
 }
 
 function four {
